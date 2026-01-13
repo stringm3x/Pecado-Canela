@@ -21,16 +21,16 @@ const Footer = () => {
             <h1> Principall</h1>
 
             <div className="flex flex-col text-md sm:text-lg">
-              <a href="#menu" className="hover:scale-105">
+              <a href="/#menu" className="hover:scale-105">
                 Menu
               </a>
-              <a href="#form" className="hover:scale-105">
+              <a href="/#form" className="hover:scale-105">
                 Opiniones
               </a>
-              <a href="#reviews" className="hover:scale-105">
+              <a href="/#reviews" className="hover:scale-105">
                 Reseñas
               </a>
-              <a href="#form" className="hover:scale-105">
+              <a href="/#form" className="hover:scale-105">
                 Ordenar
               </a>
             </div>
@@ -40,10 +40,10 @@ const Footer = () => {
             <h1>Categorias</h1>
 
             <div className="flex flex-col text-md sm:text-lg">
-              <a href="#menu" className="hover:scale-105">
+              <a href="/#menu" className="hover:scale-105">
                 Roles
               </a>
-              <a href="#toppings" className="hover:scale-105">
+              <a href="/#toppings" className="hover:scale-105">
                 Toppings
               </a>
             </div>
