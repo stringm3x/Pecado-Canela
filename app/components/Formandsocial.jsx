@@ -5,7 +5,7 @@ import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 const Formandsocial = () => {
   return (
     <section className="min-h-screen flex flex-col gap-20 items-center pt-40 lg:pt-56">
-      <h1 className="font-bree text-6xl text-center text-cinnamon">
+      <h1 className="font-bree text-4xl lg:text-6xl text-center text-cinnamon">
         Nos encanta saber tu <br /> opinion
       </h1>
 
@@ -25,11 +25,11 @@ const Formandsocial = () => {
             </h1>
           </button>
 
-          <button className="w-16 h-16 content-center justify-items-center rounded-full  bg-green group hover:bg-cinnamon hover:scale-110 p-2">
+          <button className="w-16 h-16 flex items-center justify-center rounded-full  bg-green group hover:bg-cinnamon hover:scale-110 p-2">
             <FaWhatsapp className="text-yellow w-10 h-10" />
           </button>
 
-          <button className="w-16 h-16 content-center justify-items-center rounded-full  bg-purple group hover:bg-cinnamon hover:scale-110">
+          <button className="w-16 h-16 flex items-center justify-center rounded-full  bg-purple group hover:bg-cinnamon hover:scale-110">
             <FaTelegramPlane className="text-yellow w-8 h-8" />
           </button>
         </div>

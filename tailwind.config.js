@@ -23,7 +23,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      white: "#FFFFFF",
+      lol: "##fffaeb",
       cinnamon: "#531e0d",
       green: "#075E54",
       purple: "#833AB4",

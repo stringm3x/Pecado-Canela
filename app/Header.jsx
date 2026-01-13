@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Header = () => {
@@ -16,14 +17,16 @@ const Header = () => {
 
         {/* Logo centrado */}
         <div className="absolute left-1/2 -translate-x-1/2 ">
-          <div className="w-20 h-20 lg:w-24 lg:h-24 bg-yellow2 rounded-full flex items-center justify-center">
-            <span className="text-cinnamon text-sm text-center leading-tight">
-              <a href="#home">
-                pecado de
-                <br />
-                <span className="italic">canela.</span>
-              </a>
-            </span>
+          <div className="w-20 h-20 lg:w-24 lg:h-24 p-3 bg-yellow2 rounded-full flex items-center justify-center hover:scale-110 cursor-pointer active:scale-95">
+            <a href="#home">
+              <Image
+                src="/canela.png"
+                alt="cinnamon"
+                width={200}
+                height={200}
+                className="object-cover"
+              />
+            </a>
           </div>
         </div>
       </div>

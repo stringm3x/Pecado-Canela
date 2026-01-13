@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import { FaInstagram, FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="sm:h-64 bg-cinnamon flex flex-col gap-10 xl:gap-20 pt-20 px-5 sm:px-20 text-yellow ">
-      <section className="justify-end flex flex-col sm:flex-row gap-32 md:gap-40 lg:gap-56 w-full">
-        <div>
-          <h1>pecado</h1>
+    <footer className="sm:h-64 bg-cinnamon text-[#fffaeb] flex flex-col gap-10 xl:gap-20 pt-20 px-5 lg:px-20">
+      <section className="justify-end flex flex-col sm:flex-row gap-10 lg:gap-24 xl:gap-56 w-full">
+        <div className="items-center">
+          <Image
+            src="/logo2.png"
+            alt="cinnamon"
+            width={500}
+            height={200}
+            className="object-cover "
+          />
         </div>
 
         <div className="flex flex-row gap-10 sm:gap-14 lg:gap-24 xl:gap-32 text-sm">
@@ -32,7 +39,7 @@ const Footer = () => {
           <div className="flex flex-col gap-8">
             <h1>Categorias</h1>
 
-            <div className="flex flex-col text-lg">
+            <div className="flex flex-col text-md sm:text-lg">
               <a href="#menu" className="hover:scale-105">
                 Roles
               </a>
