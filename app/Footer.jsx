@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div className="flex flex-row gap-10 sm:gap-14 lg:gap-24 xl:gap-32 text-sm">
           <div className="flex flex-col gap-8">
-            <h1> Principal</h1>
+            <h1> Principall</h1>
 
             <div className="flex flex-col text-md sm:text-lg">
               <a href="#menu" className="hover:scale-105">
