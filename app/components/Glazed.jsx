@@ -7,21 +7,21 @@ const kind = [
     id: "1",
     title: "Clásico",
     price: "$65.00",
-    image: "/glazed/rol_vainilla.png",
+    image: "/glazed/clasico.jpg",
     description: "Rol de canela clásico glaseado artesanal.",
   },
   {
     id: "2",
     title: "Chocolate",
     price: "$65.00",
-    image: "/glazed/rol_chocolate.png",
+    image: "/glazed/chocolate.jpg",
     description: "Rol de canela relleno de chocolate.",
   },
   {
     id: "3",
     title: "Tres Leches",
     price: "$65.00",
-    image: "/glazed/3leches.jpg",
+    image: "/glazed/leches.jpg",
     description: "Rol bañado en tres leches.",
   },
 ];
@@ -33,18 +33,18 @@ const Glazed = () => {
         Elige tu pecado favorito
       </h1>
 
-      <div className="flex flex-col sm:flex-row gap-8 lg:gap-16 xl:gap-20">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-1 xl:gap-20">
         {kind.map((item) => (
           <Link
             key={item.id}
             href={`/glazed/${item.id}`}
             className="flex flex-col items-center gap-5 group cursor-pointer"
           >
-            <div className="w-56 h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 bg-cinnamon rounded-full flex items-center justify-center group-hover:scale-110 transition">
+            <div className="w-64 h-64 bg-cinnamon rounded-full flex items-center justify-center group-hover:scale-110 transition">
               <Image
                 src={item.image}
                 alt={item.title}
-                width={300}
+                width={250}
                 height={300}
                 className="object-cover group-hover:scale-110 transition"
               />
