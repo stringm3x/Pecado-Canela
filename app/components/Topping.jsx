@@ -38,9 +38,10 @@ const Topping = () => {
   return (
     <section className="flex flex-col gap-20 items-center pt-36 xl:pt-56">
       <div className="flex flex-col gap-5 text-cinnamon text-center">
-        <h1 className="font-bree text-5xl sm:text-6xl ">Agregale un topping</h1>
+        <h1 className="font-bree text-5xl sm:text-6xl ">
+          Elige tu topping incluido
+        </h1>
         <h1 className="text-xl sm:text-2xl">“Hazlo aún más irresistible.”</h1>
-        <h1 className="text-xl sm:text-2xl">$10.00</h1>
       </div>
 
       <div className="grid sm:grid-cols-3 gap-5 lg:gap-10">
@@ -61,6 +62,8 @@ const Topping = () => {
           </div>
         ))}
       </div>
+
+      <h1 className="text-xl sm:text-2xl">Agrega otro topping + $10.00</h1>
     </section>
   );
 };

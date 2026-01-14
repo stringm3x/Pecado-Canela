@@ -1,22 +1,48 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [mensaje, setMensaje] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [statusMsg, setStatusMsg] = useState(""); // Estado para mensaje
+  const [statusType, setStatusType] = useState(""); // 'success' o 'error'
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (mensaje.trim().length < 10) {
-      alert("Por favor escribe al menos 10 caracteres.");
+      setStatusMsg("Por favor escribe al menos 10 caracteres.");
+      setStatusType("error");
       return;
     }
 
-    // Aquí iría la lógica para enviar el mensaje
-    console.log("Mensaje enviado:", mensaje);
-    alert("¡Gracias por compartir tu experiencia!");
+    setLoading(true);
+    setStatusMsg(""); // Limpiar mensaje previo
+    setStatusType("");
 
-    setMensaje(""); // Limpiar el campo
+    emailjs
+      .send(
+        "service_5zewsub",
+        "template_p3hmutd",
+        { mensaje },
+        {
+          publicKey: "i5H4govH2PIJvgaFK",
+        }
+      )
+      .then(() => {
+        setStatusMsg("¡Gracias por compartir tu experiencia!");
+        setStatusType("success");
+        setMensaje("");
+      })
+      .catch((error) => {
+        console.error("ERROR REAL:", error);
+        setStatusMsg("Hubo un error al enviar. Intenta de nuevo.");
+        setStatusType("error");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -37,10 +63,22 @@ const Form = () => {
 
       <button
         type="submit"
-        className="text-white rounded-2xl px-4 py-2 hover:bg-cinnamon border-2 border-black transition-colors"
+        disabled={loading}
+        className="text-white rounded-2xl px-4 py-2 border-2 border-black transition-colors hover:bg-cinnamon disabled:opacity-50"
       >
-        Enviar
+        {loading ? "Enviando..." : "Enviar"}
       </button>
+
+      {/* Mensaje dentro del formulario */}
+      {statusMsg && (
+        <p
+          className={`mt-2 text-center ${
+            statusType === "success" ? "text-green-600" : "text-red-600"
+          }`}
+        >
+          {statusMsg}
+        </p>
+      )}
     </form>
   );
 };

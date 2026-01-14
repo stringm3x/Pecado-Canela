@@ -6,14 +6,14 @@ const kind = [
   {
     id: "1",
     title: "Clásico",
-    price: "$65.00",
+    price: "$55.00",
     image: "/glazed/clasico.jpg",
     description: "Rol de canela clásico glaseado artesanal.",
   },
   {
     id: "2",
     title: "Chocolate",
-    price: "$65.00",
+    price: "$60.00",
     image: "/glazed/chocolate.jpg",
     description: "Rol de canela relleno de chocolate.",
   },

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Pecado de Canela",
   description: "Los mejores Roles de Canela",
   icons: {
-    icon: "/",
+    icon: "/canela.png",
   },
 };
 

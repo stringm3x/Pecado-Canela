@@ -60,6 +60,7 @@ const Footer = () => {
       <div className="flex flex-row justify-center items-center gap-2">
         <h1>2026</h1>
         <FaRegCopyright />
+        <h1>Proverbios 16:3</h1>
       </div>
     </footer>
   );
