@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Form from "../UI/Form";
 import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
@@ -19,14 +19,13 @@ const Formandsocial = () => {
           ¡Ordena en línea!
         </h1>
         <div className="flex flex-row items-center gap-10">
-          <button
-            className="w-36 h-20 content-center rounded-2xl bg-black group hover:bg-cinnamon hover:scale-110"
-            onClick={() => alert("Estamos trabajando para este servicio")}
-          >
-            <h1 className="text-center font-semibold text-xl text-yellow">
-              Uber Eats
-            </h1>
-          </button>
+          <a href="https://www.ubereats.com/store/pecado-de-canela-mexico-city/xYFKmJ92TpelCJTKMkbwaA?ps=1&utm_source=menu-maker">
+            <button className="w-36 h-20 content-center rounded-2xl bg-black group hover:bg-cinnamon hover:scale-110">
+              <h1 className="text-center font-semibold text-xl text-yellow">
+                Uber Eats
+              </h1>
+            </button>
+          </a>
 
           {/* 
           <button className="w-16 h-16 flex items-center justify-center rounded-full  bg-green group hover:bg-cinnamon hover:scale-110 p-2">
