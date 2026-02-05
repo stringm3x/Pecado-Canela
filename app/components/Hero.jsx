@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col gap-10 items-center bg-cinnamon text-yellow pt-44">
       <h1 className="relative z-10 font-bree text-6xl sm:text-8xl text-center">
-        Una <br /> tetación que <br /> se disfruta
+        Una <br /> tentación que <br /> se disfruta
       </h1>
 
       {/* BOTONES */}
