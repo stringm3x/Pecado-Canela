@@ -4,7 +4,7 @@ const kind = [
   {
     id: 1,
     title: "Clásico",
-    price: "$60.00",
+    price: "$75.00",
     image: "/glazed/clasico.jpg",
     description:
       "Nuestro Rol clásico hecho con masa de la casa artesanal esponjosa, rellena de canela y mascabado. Cubierto con un glaseado cremoso de queso Philadelphia, mantequilla y azúcar glass.",
@@ -12,7 +12,7 @@ const kind = [
   {
     id: 2,
     title: "Chocolate",
-    price: "$65.00",
+    price: "$78.00",
     image: "/glazed/chocolate.jpg",
     description:
       "Una irresistible versión de nuestro rol clásico con relleno de canela, mascabado. Esta cubierto con un betún cremoso de chocolate de leche y sutilmente espolvoreado con cacao.",
@@ -20,7 +20,7 @@ const kind = [
   {
     id: 3,
     title: "Tres Leches",
-    price: "$70.00",
+    price: "$80.00",
     image: "/glazed/leches.jpg",
     description:
       "Rol base clásica esponjoso, relleno de canela y azúcar, bañado en mezcla de tres leches y terminado con un glaseado natural decorado.",

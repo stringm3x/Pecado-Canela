@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Reviews = () => {
   return (
@@ -10,8 +11,14 @@ const Reviews = () => {
           vez.""
         </h1>
       </div>
-      <div className="bg-yellow2 h-60 sm:h-auto sm:row-span-2 sm:col-span-1 ">
-        2
+      <div className="relative bg-yellow2 h-60 sm:h-auto sm:row-span-2 sm:col-span-1 overflow-hidden rounded-xl">
+        <Image
+          src="/img1.jpeg"
+          alt="image 1"
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          priority
+        />
       </div>
 
       <div className="bg-yellow2 row-span-1 col-span-1 content-center p-5">
@@ -20,12 +27,24 @@ const Reviews = () => {
           sabor lo dicen todo. Probé uno… y quise otro."
         </h1>
       </div>
-      <div className="bg-yellow2  h-60 sm:h-auto sm:row-span-2 sm:col-span-1">
-        4
+      <div className="relative bg-yellow2 h-60 sm:h-auto sm:row-span-2 sm:col-span-1 overflow-hidden rounded-xl">
+        <Image
+          src="/img2.jpeg"
+          alt="image 2"
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          priority
+        />
       </div>
 
-      <div className="bg-yellow2  h-60 sm:h-auto sm:row-span-2 sm:col-span-1">
-        5
+      <div className="relative bg-yellow2 h-60 sm:h-auto sm:row-span-2 sm:col-span-1 overflow-hidden rounded-xl">
+        <Image
+          src="/img3.jpeg"
+          alt="image 3"
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          priority
+        />
       </div>
       <div className="bg-yellow2 row-span-1 col-span-1 content-center p-5">
         <h1 className="">
