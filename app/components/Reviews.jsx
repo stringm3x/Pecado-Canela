@@ -39,7 +39,7 @@ const Reviews = () => {
 
       <div className="relative bg-yellow2 h-60 sm:h-auto sm:row-span-2 sm:col-span-1 overflow-hidden rounded-xl">
         <Image
-          src="/img3.jpeg"
+          src="/img4.jpeg"
           alt="image 3"
           fill
           className="object-cover transition-transform duration-500 hover:scale-105"
