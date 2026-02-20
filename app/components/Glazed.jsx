@@ -20,7 +20,7 @@ const kind = [
   {
     id: "3",
     title: "Tres Leches",
-    price: "$69.00",
+    price: "$74.00",
     image: "/glazed/leches.jpg",
     description: "Rol bañado en tres leches.",
   },
