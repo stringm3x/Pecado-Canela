@@ -161,7 +161,7 @@ const Topping = () => {
           <div className="inline-flex items-center gap-2 bg-cinnamon/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 bg-berry rounded-full animate-pulse" />
             <span className="text-cinnamon text-sm font-medium tracking-wide">
-              🍯 TOPPINGS ILIMITADOS
+              TOPPING para acompañar
             </span>
           </div>
 
@@ -244,36 +244,10 @@ const Topping = () => {
         {/* Mensaje adicional */}
         <div ref={extraRef} className="text-center mt-16">
           <div className="inline-flex items-center gap-3 bg-cinnamon/5 backdrop-blur-sm px-8 py-4 rounded-full">
-            <span className="text-3xl">✨</span>
             <span className="text-cinnamon text-xl md:text-2xl font-medium">
               Agrega otro topping{" "}
               <span className="text-berry font-bold">+ $10.00</span>
             </span>
-            <span className="text-3xl">✨</span>
-          </div>
-
-          {/* Botón para personalizar */}
-          <div className="mt-8">
-            <button className="group relative px-8 py-4 bg-berry text-white rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">
-              <span className="relative z-10 flex items-center gap-2">
-                Personalizar mi rol
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </button>
           </div>
         </div>
       </div>

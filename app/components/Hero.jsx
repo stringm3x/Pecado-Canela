@@ -168,7 +168,7 @@ const Hero = () => {
             >
               <button className="relative w-48 h-14 bg-caramel text-cinnamon rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  🥐 Ver Roles
+                  Ver Roles
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-caramel to-glaze opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
@@ -181,7 +181,7 @@ const Hero = () => {
             >
               <button className="relative w-48 h-14 bg-transparent border-2 border-glaze text-glaze rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 hover:bg-glaze hover:text-cinnamon">
                 <span className="flex items-center justify-center gap-2">
-                  🍯 Toppings
+                  Toppings
                 </span>
               </button>
             </Link>
@@ -195,7 +195,6 @@ const Hero = () => {
               { icon: "⭐", label: "4.9 (2k+ reseñas)" },
             ].map((stat, index) => (
               <div key={index} className="flex items-center gap-2">
-                <span className="text-2xl">{stat.icon}</span>
                 <span className="text-glaze/80 text-sm">{stat.label}</span>
               </div>
             ))}
@@ -227,15 +226,7 @@ const Hero = () => {
               {/* Overlay degradado sutil */}
               <div className="absolute inset-0 bg-gradient-to-tr from-cinnamon/20 via-transparent to-transparent" />
 
-              {/* Elementos flotantes sobre la imagen */}
-              <div className="absolute top-4 left-4 bg-glaze/95 backdrop-blur-sm text-cinnamon px-4 py-2 rounded-full shadow-xl flex items-center gap-2">
-                <span className="text-amber-500">⭐</span>
-                <span className="font-bold">4.9</span>
-                <span className="text-cinnamon/70">(2k+)</span>
-              </div>
-
               <div className="absolute bottom-4 right-4 bg-cinnamon/95 backdrop-blur-sm text-glaze px-4 py-2 rounded-full shadow-xl flex items-center gap-2">
-                <span className="text-xl">🔥</span>
                 <span className="font-medium">Recién horneados</span>
               </div>
 

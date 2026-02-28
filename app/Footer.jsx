@@ -183,11 +183,6 @@ const Footer = () => {
                 <SiUbereats className="text-cream text-xl" />
                 <span className="text-sm font-medium">Uber Eats</span>
               </button>
-              <button className="flex items-center gap-2 bg-cream/10 hover:bg-cream/20 px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105">
-                <SiRapid className="text-cream text-xl" />{" "}
-                {/* Cambiado SiRappi a SiRapid */}
-                <span className="text-sm font-medium">Rappi</span>
-              </button>
             </div>
 
             {/* Redes sociales */}
@@ -198,11 +193,6 @@ const Footer = () => {
                   Icon: FaInstagram,
                   href: "https://instagram.com/pecadodecanelamx",
                   color: "hover:bg-[#E4405F]",
-                },
-                {
-                  Icon: FaFacebookF,
-                  href: "https://facebook.com",
-                  color: "hover:bg-[#1877F2]",
                 },
                 {
                   Icon: FaTiktok,
@@ -226,21 +216,6 @@ const Footer = () => {
                   <social.Icon className="text-cream text-xl group-hover:text-white transition-colors" />
                 </a>
               ))}
-            </div>
-
-            {/* Newsletter */}
-            <div className="mt-8">
-              <h4 className="text-cream/80 text-sm mb-2">Newsletter</h4>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Tu email"
-                  className="flex-1 bg-cream/10 border border-cream/20 rounded-l-xl px-4 py-2 text-sm text-cream placeholder-cream/40 focus:outline-none focus:border-caramel"
-                />
-                <button className="bg-caramel text-cinnamon px-4 py-2 rounded-r-xl font-medium hover:bg-caramel/80 transition-colors">
-                  Suscribir
-                </button>
-              </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,12 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Form from "../UI/Form";
-import { FaWhatsapp, FaInstagram, FaUber, FaTelegramPlane } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaUber,
+  FaTelegramPlane,
+} from "react-icons/fa";
 import { SiUbereats } from "react-icons/si";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -135,7 +140,7 @@ const Formandsocial = () => {
             <div className="inline-flex items-center gap-2 bg-cinnamon/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
               <span className="w-2 h-2 bg-berry rounded-full animate-pulse" />
               <span className="text-cinnamon text-sm font-medium tracking-wide">
-                💬 CONTÁCTANOS
+                CONTÁCTANOS
               </span>
             </div>
 
@@ -162,7 +167,7 @@ const Formandsocial = () => {
 
           {/* Formulario */}
           <div ref={formRef} className="mb-20">
-            <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl p-6 md:p-8">
+            <div className="p-6 md:p-8">
               <Form />
             </div>
           </div>
@@ -174,7 +179,7 @@ const Formandsocial = () => {
               <div className="inline-flex items-center gap-2 bg-cinnamon/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
                 <span className="w-2 h-2 bg-matcha rounded-full animate-pulse" />
                 <span className="text-cinnamon text-sm font-medium tracking-wide">
-                  🚚 DELIVERY
+                  DELIVERY
                 </span>
               </div>
 
@@ -220,40 +225,6 @@ const Formandsocial = () => {
                   </div>
                 </button>
               </a>
-
-              {/* Rappi (ejemplo) */}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                ref={(el) => (buttonsRef.current[1] = el)}
-              >
-                <button className="group relative w-48 h-20 bg-[#FF3B30] hover:bg-cinnamon rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-
-                  <div className="relative z-10 flex items-center justify-center gap-2">
-                    <span className="text-white font-bold text-lg">Rappi</span>
-                  </div>
-                </button>
-              </a>
-
-              {/* Didi Food (ejemplo) */}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                ref={(el) => (buttonsRef.current[2] = el)}
-              >
-                <button className="group relative w-48 h-20 bg-[#FF8B00] hover:bg-cinnamon rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-
-                  <div className="relative z-10 flex items-center justify-center gap-2">
-                    <span className="text-white font-bold text-lg">
-                      Didi Food
-                    </span>
-                  </div>
-                </button>
-              </a>
             </div>
 
             {/* Redes sociales */}
@@ -284,18 +255,6 @@ const Formandsocial = () => {
                 >
                   <button className="w-16 h-16 rounded-full bg-gradient-to-br from-purple via-berry to-caramel hover:bg-cinnamon transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 flex items-center justify-center group">
                     <FaInstagram className="text-yellow text-3xl group-hover:scale-110 transition-transform duration-300" />
-                  </button>
-                </a>
-
-                {/* Telegram (manteniendo tu opción) */}
-                <a
-                  href="https://t.me/tuusuario"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ref={(el) => (socialRefs.current[2] = el)}
-                >
-                  <button className="w-16 h-16 rounded-full bg-lavender hover:bg-cinnamon transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 flex items-center justify-center group">
-                    <FaTelegramPlane className="text-yellow text-3xl group-hover:scale-110 transition-transform duration-300" />
                   </button>
                 </a>
               </div>

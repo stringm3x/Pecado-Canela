@@ -127,7 +127,7 @@ const Glazed = () => {
           <div className="inline-flex items-center gap-2 bg-cinnamon/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
             <span className="w-2 h-2 bg-cinnamon rounded-full animate-pulse" />
             <span className="text-cinnamon text-sm font-medium tracking-wide">
-              🍯 ROLES GLASEADOS
+              ROLES GLASEADOS
             </span>
           </div>
 
@@ -237,32 +237,6 @@ const Glazed = () => {
               <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-caramel/30 transition-colors duration-300 pointer-events-none" />
             </Link>
           ))}
-        </div>
-
-        {/* Botón para ver más productos */}
-        <div className="text-center mt-16">
-          <Link href="/menu">
-            <button className="group relative px-8 py-4 bg-transparent border-2 border-cinnamon text-cinnamon rounded-full font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">
-              <span className="relative z-10 flex items-center gap-2">
-                Ver menú completo
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-cinnamon/0 group-hover:bg-cinnamon/10 transition-colors duration-300" />
-            </button>
-          </Link>
         </div>
       </div>
     </section>
