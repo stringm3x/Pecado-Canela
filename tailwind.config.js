@@ -23,18 +23,25 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      cream: "#FEF7E9",
-      cinnamon: {
-        DEFAULT: "#8B3A2A",
-        light: "#B45F4A",
-      },
-      glaze: "#F9F2E0",
-      caramel: "#F3D9A4",
-      matcha: "#4A7856",
-      lavender: "#B8A2C6",
-      berry: "#D94A4A",
-      darkBrown: "#2C1810",
-      stone: "#7C8C8A",
+      cream: "#FFFAEB", // (antes "lol") - Corregido el doble #
+      cinnamon: "#531E0D", // (antes "cinnamon") - Tu marrón oscuro original
+      matcha: "#075E54", // (antes "green") - Verde intenso
+      lavender: "#833AB4", // (antes "purple") - Púrpura vibrante
+      berry: "#FF3131", // (antes "red") - Rojo brillante
+      caramel: "#FFECB8", // (antes "yellow") - Amarillo cremoso
+      glaze: "#F9F5CD", // (antes "yellow2") - Glaseado suave
+      dark: "#000000", // (antes "black") - Negro puro
+      stone: "#A1A1AA", // (antes "gray") - Gris neutro
+
+      // Mantenemos también los nombres originales por compatibilidad
+      lol: "#FFFAEB",
+      green: "#075E54",
+      purple: "#833AB4",
+      red: "#FF3131",
+      yellow: "#FFECB8",
+      yellow2: "#F9F5CD",
+      black: "#000000",
+      gray: "#A1A1AA",
     },
     spacing: {
       0: "0",
