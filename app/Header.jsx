@@ -4,7 +4,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="fixed flex flex-col items-center inset-x-0 top-10 z-50 bg-transparent">
-      <div className="relative h-20 w-[353px] sm:w-[500px] lg:h-28 lg:w-[780px] bg-cinnamon rounded-full flex items-center justify-between px-10 sm:px-20 py-4 text-md sm:text-xl text-yellow2">
+      <div className="relative h-20 w-[353px] sm:w-[500px] lg:h-28 lg:w-[780px] bg-cinnamon-DEFAULT rounded-full flex items-center justify-between px-10 sm:px-20 py-4 text-md sm:text-xl text-yellow2">
         {/* Menú */}
         <span className="transition-transform hover:scale-125 cursor-pointer active:scale-95">
           <a href="/#menu">Menú</a>

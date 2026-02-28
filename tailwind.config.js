@@ -23,15 +23,18 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      lol: "##fffaeb",
-      cinnamon: "#531e0d",
-      green: "#075E54",
-      purple: "#833AB4",
-      red: "#ff3131",
-      yellow: "#ffecb8",
-      yellow2: "#f9f5cd",
-      black: "#000000",
-      gray: "#A1A1AA",
+      cream: "#FEF7E9",
+      cinnamon: {
+        DEFAULT: "#8B3A2A",
+        light: "#B45F4A",
+      },
+      glaze: "#F9F2E0",
+      caramel: "#F3D9A4",
+      matcha: "#4A7856",
+      lavender: "#B8A2C6",
+      berry: "#D94A4A",
+      darkBrown: "#2C1810",
+      stone: "#7C8C8A",
     },
     spacing: {
       0: "0",
