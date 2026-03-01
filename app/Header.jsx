@@ -60,6 +60,10 @@ const Header = () => {
               duration: 0.3,
               ease: "power2.inOut",
             });
+            gsap.to(logoRef.current, {
+              scale: 0.95,
+              duration: 0.3,
+            });
           } else if (scrollY <= 50 && isScrolled) {
             setIsScrolled(false);
             gsap.to(headerBgRef.current, {
@@ -67,6 +71,10 @@ const Header = () => {
               boxShadow: "0 10px 30px -5px rgba(83,30,13,0.15)",
               duration: 0.3,
               ease: "power2.inOut",
+            });
+            gsap.to(logoRef.current, {
+              scale: 1,
+              duration: 0.3,
             });
           }
         },
@@ -102,7 +110,6 @@ const Header = () => {
           duration: 0.3,
         });
 
-        // Animar fondo del overlay
         gsap.to(".menu-overlay", {
           opacity: 1,
           duration: 0.3,
@@ -174,71 +181,68 @@ const Header = () => {
 
   const menuItems = [
     { href: "/#menu", label: "Menú" },
-    { href: "/#nosotros", label: "Nosotros" },
     { href: "/#contacto", label: "Contacto" },
-    { href: "/#ubicaciones", label: "Ubicaciones" },
   ];
 
   return (
     <>
-      {/* Header flotante */}
+      {/* Header flotante - MÁS COMPACTO */}
       <header
         ref={headerRef}
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl"
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-auto min-w-[320px] max-w-[500px] px-2"
       >
-        {/* Fondo amarillo - siempre visible */}
+        {/* Fondo amarillo */}
         <div
           ref={headerBgRef}
-          className="absolute inset-0 rounded-2xl"
+          className="absolute inset-0 rounded-full" // Cambiado a rounded-full para forma de píldora
           style={{
-            backgroundColor: "#FFECB8", // yellow
+            backgroundColor: "#FFECB8",
             boxShadow: "0 10px 30px -5px rgba(83,30,13,0.15)",
           }}
         />
 
         {/* Borde decorativo */}
         <div
-          className="absolute inset-0 rounded-2xl"
+          className="absolute inset-0 rounded-full"
           style={{ border: "1px solid rgba(83,30,13,0.1)" }}
         />
 
         {/* Contenido */}
-        <div className="relative px-4 sm:px-8 py-3">
-          <nav className="flex items-center justify-between">
-            {/* Logo */}
+        <div className="relative px-3 py-1.5">
+          <nav className="flex items-center justify-between gap-4">
+            {/* Logo con animación */}
             <Link href="/#home" className="relative z-50 group" ref={logoRef}>
-              <div className="relative w-14 h-14 lg:w-16 lg:h-16">
-                {/* Fondo circular del logo */}
+              <div className="relative w-10 h-10 md:w-12 md:h-12">
+                {/* Fondo circular */}
                 <div
                   className="absolute inset-0 rounded-full"
-                  style={{ backgroundColor: "#F9F5CD" }} // glaze
+                  style={{ backgroundColor: "#F9F5CD" }}
                 />
 
-                {/* Borde del logo */}
+                {/* Borde animado */}
                 <div
-                  className="absolute inset-0 rounded-full border-2 transition-colors duration-300"
+                  className="absolute inset-0 rounded-full border-2 transition-all duration-300 group-hover:border-cinnamon/40"
                   style={{
                     borderColor: "rgba(83,30,13,0.2)",
-                    ...(isScrolled && { borderColor: "rgba(83,30,13,0.3)" }),
                   }}
                 />
 
                 {/* Imagen */}
-                <div className="absolute inset-2">
+                <div className="absolute inset-1.5">
                   <Image
                     src="/canela.png"
                     alt="Roles de Canela"
                     fill
                     className="object-contain"
                     priority
-                    sizes="(max-width: 768px) 56px, 64px"
+                    sizes="40px"
                   />
                 </div>
               </div>
             </Link>
 
-            {/* Menú Desktop */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Menú Desktop - MÁS COMPACTO */}
+            <div className="flex items-center gap-1">
               {menuItems.map((item, index) => (
                 <Link
                   key={item.href}
@@ -246,39 +250,23 @@ const Header = () => {
                   ref={(el) => (menuItemsRef.current[index] = el)}
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
-                  className="relative font-medium text-lg tracking-wide px-2 py-1"
-                  style={{ color: "#531E0D" }} // cinnamon
+                  className="relative font-medium text-sm md:text-base px-3 py-1.5 rounded-full hover:bg-cinnamon/5 transition-colors"
+                  style={{ color: "#531E0D" }}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
 
-            {/* Botón de acción */}
-            <div className="hidden lg:block">
-              <Link href="/#ordenar">
-                <button
-                  className="px-6 py-2.5 rounded-full font-medium hover:scale-105 hover:shadow-lg transition-all duration-300 active:scale-95"
-                  style={{
-                    backgroundColor: "#531E0D", // cinnamon
-                    color: "#F9F5CD", // glaze
-                  }}
-                >
-                  Ordenar ahora
-                </button>
-              </Link>
-            </div>
-
-            {/* Botón Hamburguesa */}
+            {/* Botón Hamburguesa - MÁS COMPACTO */}
             <button
               ref={hamburgerRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden relative z-50 w-12 h-12 rounded-xl transition-colors"
+              className="sm:hidden relative z-50 w-8 h-8 rounded-full transition-colors"
               style={{ backgroundColor: "rgba(83,30,13,0.05)" }}
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-              aria-expanded={isMenuOpen}
             >
-              <div className="w-6 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-between">
+              <div className="w-4 h-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-between">
                 <span
                   className="hamburger-line-1 w-full h-0.5 rounded-full transform origin-left transition-all"
                   style={{ backgroundColor: "#531E0D" }}
@@ -297,43 +285,42 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Menú Móvil - AHORA CON TUS COLORES, SIN BLANCO */}
+      {/* Menú Móvil - MÁS COMPACTO */}
       <div
         ref={mobileMenuRef}
-        className="fixed inset-y-0 right-0 w-full sm:w-96 z-40 lg:hidden"
+        className="fixed inset-y-0 right-0 w-64 z-40 sm:hidden"
         style={{
           transform: "translateX(100%)",
-          backgroundColor: "#FFECB8", // yellow (mismo que el header)
+          backgroundColor: "#FFECB8",
           boxShadow: "-5px 0 30px rgba(83,30,13,0.25)",
         }}
       >
-        <div className="flex flex-col h-full pt-32 px-8">
-          {/* Logo en móvil */}
-          <div className="mb-8">
-            <div className="relative w-24 h-24 mx-auto">
-              {/* Fondo circular */}
+        <div className="flex flex-col h-full pt-20 px-4">
+          {/* Logo pequeño */}
+          <div className="mb-6">
+            <div className="relative w-16 h-16 mx-auto">
               <div
                 className="absolute inset-0 rounded-full"
-                style={{ backgroundColor: "#F9F5CD" }} // glaze
+                style={{ backgroundColor: "#F9F5CD" }}
               />
               <Image
                 src="/canela.png"
                 alt="Roles de Canela"
                 fill
-                className="object-contain p-4"
+                className="object-contain p-3"
               />
             </div>
           </div>
 
-          {/* Links del menú */}
+          {/* Links */}
           {menuItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={handleLinkClick}
-              className="py-4 text-2xl font-medium border-b transition-all duration-300 hover:translate-x-2"
+              className="py-3 text-lg font-medium border-b text-center"
               style={{
-                color: "#531E0D", // cinnamon
+                color: "#531E0D",
                 borderColor: "rgba(83,30,13,0.1)",
               }}
             >
@@ -341,14 +328,14 @@ const Header = () => {
             </Link>
           ))}
 
-          {/* Botón de acción en móvil */}
-          <div className="mt-8">
+          {/* Botón ordenar móvil */}
+          <div className="mt-4">
             <Link href="/#ordenar" onClick={handleLinkClick}>
               <button
-                className="w-full py-4 rounded-xl font-medium text-lg hover:scale-105 transition-transform duration-300"
+                className="w-full py-3 rounded-xl font-medium text-base"
                 style={{
-                  backgroundColor: "#531E0D", // cinnamon
-                  color: "#F9F5CD", // glaze
+                  backgroundColor: "#531E0D",
+                  color: "#F9F5CD",
                 }}
               >
                 Ordenar ahora
@@ -356,36 +343,21 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Información */}
-          <div className="mt-auto pb-8">
-            <p className="text-center text-sm" style={{ color: "#531E0D" }}>
-              🍽️ Lunes a Domingo • 8:00 - 22:00
+          {/* Info compacta */}
+          <div className="mt-auto pb-4">
+            <p className="text-center text-xs" style={{ color: "#531E0D" }}>
+              🍽️ 8:00 - 22:00
             </p>
-            <div className="flex justify-center space-x-4 mt-4">
-              {/* Redes sociales con tus colores */}
-              {["📱", "📘", "📸"].map((icon, i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                  style={{
-                    backgroundColor: "rgba(83,30,13,0.1)",
-                    color: "#531E0D",
-                  }}
-                >
-                  {icon}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Overlay del menú móvil - AHORA EN TONO CINNAMON */}
+      {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="menu-overlay fixed inset-0 z-30 lg:hidden"
+          className="menu-overlay fixed inset-0 z-30 sm:hidden"
           style={{
-            backgroundColor: "rgba(83,30,13,0.5)", // cinnamon con opacidad
+            backgroundColor: "rgba(83,30,13,0.5)",
             backdropFilter: "blur(4px)",
           }}
           onClick={() => setIsMenuOpen(false)}

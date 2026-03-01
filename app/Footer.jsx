@@ -118,11 +118,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-cream/70">
                 <FaClock className="text-caramel" />
-                <span className="text-sm">Lun - Dom: 8:00 - 22:00</span>
+                <span className="text-sm">Vier - Dom: 6:00 - 23:00</span>
               </div>
               <div className="flex items-center gap-3 text-cream/70">
                 <FaPhone className="text-caramel" />
-                <span className="text-sm">+52 55 1234 5678</span>
+                <span className="text-sm">+52 56 1180 9801</span>
               </div>
             </div>
           </div>

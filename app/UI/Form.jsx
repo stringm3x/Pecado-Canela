@@ -151,7 +151,7 @@ const Form = () => {
         <div className="inline-flex items-center gap-2 bg-cinnamon/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
           <span className="w-2 h-2 bg-cinnamon rounded-full animate-pulse" />
           <span className="text-cinnamon text-sm font-medium tracking-wide">
-            💬 COMPARTE
+            COMPARTE
           </span>
         </div>
 
@@ -253,7 +253,6 @@ const Form = () => {
           ) : (
             <>
               <span>Enviar opinión</span>
-              <span className="text-xl">✨</span>
             </>
           )}
         </button>

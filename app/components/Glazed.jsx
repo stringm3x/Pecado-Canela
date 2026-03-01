@@ -90,8 +90,7 @@ const Glazed = () => {
             trigger: sectionRef.current,
             start: "top 70%",
             end: "bottom 20%",
-            toggleActions: "play none none none", // SOLO REPRODUCIR UNA VEZ
-            once: true, // FORZAR UNA SOLA VEZ
+            toggleActions: "play none none none",
           },
         }
       );
