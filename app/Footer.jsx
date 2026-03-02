@@ -14,7 +14,7 @@ import {
   FaClock,
   FaPhone,
 } from "react-icons/fa";
-import { SiUbereats, SiRapid } from "react-icons/si"; // Cambiado SiRappi a SiRapid
+import { SiUbereats, SiRapid } from "react-icons/si";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -27,7 +27,7 @@ const Footer = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animación de entrada
+      // Animación de entrada - SIN once:true para que se vea siempre
       gsap.from(contentRef.current, {
         y: 50,
         opacity: 0,
@@ -37,12 +37,11 @@ const Footer = () => {
           trigger: footerRef.current,
           start: "top 80%",
           end: "bottom 20%",
-          toggleActions: "play none none none",
-          once: true,
+          toggleActions: "play reverse play reverse", // Cambiado: play al entrar, reverse al salir
         },
       });
 
-      // Animación de iconos sociales
+      // Animación de iconos sociales - SIN once:true
       gsap.from(socialRefs.current, {
         scale: 0,
         rotation: 360,
@@ -53,8 +52,7 @@ const Footer = () => {
           trigger: footerRef.current,
           start: "top 70%",
           end: "bottom 20%",
-          toggleActions: "play none none none",
-          once: true,
+          toggleActions: "play reverse play reverse", // Cambiado
         },
       });
     });
@@ -99,7 +97,7 @@ const Footer = () => {
                   src="/logo2.png"
                   alt="Pecado de Canela"
                   fill
-                  className="object-contain brightness-0 invert" // Ajusta según tu logo
+                  className="object-contain brightness-0 invert"
                   priority
                 />
               </div>
@@ -223,7 +221,7 @@ const Footer = () => {
         {/* Línea divisoria */}
         <div className="border-t border-cream/10 my-8" />
 
-        {/* Bottom bar */}
+        {/* Bottom bar con crédito STRING */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cream/60">
           <div className="flex items-center gap-2">
             <span>{currentYear}</span>
@@ -237,7 +235,7 @@ const Footer = () => {
             <span>en México</span>
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
             <Link
               href="/privacidad"
               className="hover:text-caramel transition-colors"
@@ -256,6 +254,27 @@ const Footer = () => {
             >
               Proverbios 16:3
             </Link>
+
+            {/* Crédito STRING con tipografía Anton */}
+            <div className="flex items-center space-x-2 border-l border-cream/10 pl-4 ml-2">
+              <span className="text-cream/40 text-xs">Diseñado por</span>
+              <a
+                href="https://www.stringwebs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-1"
+              >
+                <span
+                  className="font-anton text-sm md:text-base tracking-wider text-caramel group-hover:text-cream transition-colors duration-300"
+                  style={{ fontFamily: "Anton, sans-serif" }}
+                >
+                  STRING
+                </span>
+                <span className="text-xs text-cream/40 group-hover:text-caramel transition-colors">
+                  ↗
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

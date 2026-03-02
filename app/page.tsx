@@ -19,7 +19,7 @@ export default function Home() {
         <Topping />
       </section>
 
-      <section id="form">
+      <section id="contacto">
         <Formandsocial />
       </section>
 
